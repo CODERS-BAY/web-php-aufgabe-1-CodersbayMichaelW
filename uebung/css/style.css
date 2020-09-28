@@ -1,0 +1,181 @@
+:root {
+    --black: rgb(0, 0, 0);
+    --dark: rgb(50, 50, 50);
+    --grey: rgb(240, 240, 240);
+    --white: rgb(255, 255, 255);
+    --cyan: rgb(0, 255, 255);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Merriweather', Arial;
+    color: var(--black);
+}
+main {
+    text-align: center;
+}
+
+/* navigation */
+nav {
+    background-color: var(--dark);
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.navbutton {
+    font-size: 2rem;
+    background-color: var(--dark);
+    color: var(--white);
+    border: none;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    align-self: flex-end;
+}
+nav ul {
+    font-size: 2rem;
+    display: none;
+    text-align: left;
+    list-style: none;
+    margin-left: 1rem;
+}
+[aria-expanded="true"]~ul {
+    display: block;
+}
+nav li {
+    margin-top: 1rem; 
+    border-left: 2px solid var(--cyan);
+}
+nav a {
+    color: var(--grey);
+    text-decoration: none;
+    margin: 0 1rem;
+    text-shadow: 0 -1px 0 var(--white);
+}
+nav a.active-page {
+    text-decoration: underline;
+}
+@media (min-width: 55rem) {
+    .nav {
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 0;
+    }
+    nav button {
+        display: none
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0;
+        margin-left: 0;
+    }
+    nav li {
+        padding-top: 1rem;
+        margin-top: 0;
+        border: none;
+    }
+    nav a:hover {
+        text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,0.8),0 -4px 15px rgba(255,255,255,0.5);
+    }
+}
+
+/* main */
+h1 {
+    text-align: center;
+    margin: 2rem;
+    font-size: 3rem;
+    color: rgb(233, 172, 80);
+}
+
+p {
+    font-size: 1.5rem;
+    padding-top: 0.3rem;
+}
+/* form */
+form div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+form p {
+    min-width: 100px;
+}
+form input {
+    margin-left: 10px;
+    align-self: center;
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: larger;
+}
+form p:last-child {
+    padding-top: 0;
+    text-align: left;
+    margin-left: 0.5rem;
+    min-width: 0;
+}
+/* label */
+.super label {
+    font-size: 1.5rem;
+    align-self: center;
+    text-align: left;
+    min-width: 100px;
+    margin-right: 0.5rem;
+}
+/* dropdown N/S */
+form select {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    width: 40px;
+}
+
+/* button */
+button {
+    font-size: 1.5rem;
+    width: 120px;
+    height: 50px;
+    background-color: rgb(255, 187, 0);
+    border-radius: 20px;
+    margin: 0.5rem 0;
+}
+button:hover {
+    background-color: rgb(255, 219, 118);
+}
+button:active {
+    transform: scale(0.9);
+}
+
+/* columns Nr7 */
+.columns {
+    display: flex;
+    justify-content: center;
+}
+.columns p:not(:first-of-type) {
+    margin-left: 10px;
+}
+
+
+/* game Nr8 */
+.game div {
+    display: flex;
+    justify-content: center;
+}
+.game div p:first-of-type {
+    min-width: 80px;
+    text-align: right;
+    margin-right: 0.8rem;
+}
+.winner {
+    margin-top: 2rem;
+    flex-direction: column;
+}
+.winner h2 {
+    font-size: 2.5rem;
+}
+.winner p {
+    text-align: center !important;
+    margin-right: 0 !important;;
+}
